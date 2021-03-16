@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- App -->
+    <string name="app_name">MooVee</string>
+
+    <!-- Common -->
+    <string name="success">Success</string>
+    <string name="try_again">Try Again</string>
+
+    <!-- Settings Fragment -->
+    <string name="settings">Settings</string>
+
+    <!-- Layout -->
+    <string name="item_name">Item Name</string>
+    <string name="placeholder">-</string>
+
+    <!-- Movie List Fragment -->
+    <string name="items">Movies</string>
+    <string name="loading_items">Loading Movies</string>
+    <string name="loading_details">Loading Details</string>
+    <string name="loading_reviews">Loading Reviews</string>
+    <string name="list_items_failure">Failed to List Movies</string>
+
+    <!-- Movie Details Fragment -->
+    <string name="details">Details</string>
+    <string name="updated_at">Updated: %1$s</string>
+
+</resources>

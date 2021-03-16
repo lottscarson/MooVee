@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/movieItemsFragment">
+
+    <fragment
+        android:id="@+id/movieItemsFragment"
+        android:name="com.scottlarson.mooveeapp.movielist.MovieListItemFragment"
+        android:label="fragment_vault_items"
+        tools:layout="@layout/fragment_movie_items" >
+        <action
+            android:id="@+id/action_movieItemsFragment_to_movieDetailsFragment"
+            app:destination="@id/movieDetailsFragment">
+            <argument
+                android:name="movie"
+                app:nullable="false"
+                app:argType="com.scottlarson.mooveeapp.models.Movie" />
+        </action>
+        <action
+            android:id="@+id/action_movieItemsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.scottlarson.mooveeapp.settings.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" >
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.scottlarson.mooveeapp.moviedetails.MovieDetailsFragment"
+        android:label="fragment_movie_details"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="movie"
+            app:nullable="false"
+            app:argType="com.scottlarson.mooveeapp.models.Movie" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.scottlarson.mooveeapp.review.ReviewFragment"
+        android:label="fragment_review"
+        tools:layout="@layout/fragment_review">
+        <argument
+            android:name="review"
+            app:nullable="false"
+            app:argType="com.scottlarson.mooveeapp.models.Review" />
+    </fragment>
+
+</navigation>
