@@ -23,9 +23,6 @@ class ReviewFragment : Fragment() {
     private val bindingDelegate = ObjectDelegate<FragmentReviewBinding>()
     private val binding by bindingDelegate
 
-    /** Navigation controller used to manage app navigation. */
-    private lateinit var navController: NavController
-
     /** Fragment arguments handled by Navigation Library safe args */
     private val args: ReviewFragmentArgs by navArgs()
 

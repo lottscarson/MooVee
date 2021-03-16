@@ -103,7 +103,7 @@ class MovieDetailsFragment : Fragment(), CoroutineScope {
                 showLoading(R.string.loading_details)
                 launch(Dispatchers.Main) {
                     try {
-                        val response = MovieServiceBuilder.movieService.getDetails(movie.id)
+                        val response = MovieServiceBuilder.getInstance(app).movieService.getDetails(movie.id)
                         if (response.isSuccessful && response.body() != null) {
                             val item = response.body()!!
                             binding.labelTitle.text = item.title
@@ -129,7 +129,7 @@ class MovieDetailsFragment : Fragment(), CoroutineScope {
 //                showLoading(R.string.loading_reviews)
                 launch(Dispatchers.Main) {
                     try {
-                        val reviewResponse = MovieServiceBuilder.movieService.getReviews(movie.id)
+                        val reviewResponse = MovieServiceBuilder.getInstance(app).movieService.getReviews(movie.id)
                         if (reviewResponse.isSuccessful && reviewResponse.body() != null) {
                             itemList.clear()
                             val items = reviewResponse.body()!!.reviews

@@ -105,7 +105,7 @@ class MovieListItemFragment : Fragment(), CoroutineScope {
                 showLoading(R.string.loading_items)
                 launch(Dispatchers.Main) {
                     try {
-                        val response = MovieServiceBuilder.movieService.getMovies()
+                        val response = MovieServiceBuilder.getInstance(app).movieService.getMovies()
                         if (response.isSuccessful && response.body() != null) {
                             val items = response.body()!!.movies
                             itemList.clear()
