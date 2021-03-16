@@ -37,6 +37,14 @@
             android:name="movie"
             app:nullable="false"
             app:argType="com.scottlarson.mooveeapp.models.Movie" />
+        <action
+            android:id="@+id/action_movieDetailsFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment">
+            <argument
+                android:name="review"
+                app:nullable="false"
+                app:argType="com.scottlarson.mooveeapp.models.Review" />
+        </action>
     </fragment>
     <fragment
         android:id="@+id/reviewFragment"

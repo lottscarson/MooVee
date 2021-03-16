@@ -155,8 +155,7 @@ class MovieDetailsFragment : Fragment(), CoroutineScope {
      */
     private fun configureRecyclerView() {
         adapter = ReviewListItemAdapter(itemList) { item ->
-            // Not sure why `MovieDetailsFragmentDirections isn't being generated properly...
-//            navController.navigate(MovieDetailsFragmentDirections.actionMovieDetailsFragmentToReviewFragment(item))
+            navController.navigate(MovieDetailsFragmentDirections.actionMovieDetailsFragmentToReviewFragment(item))
         }
         binding.itemRecyclerView.adapter = adapter
         binding.itemRecyclerView.layoutManager = LinearLayoutManager(requireContext())
